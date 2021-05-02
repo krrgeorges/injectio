@@ -1,0 +1,25 @@
+{
+	"manifest_version":2,
+	"name":"Injectio",
+	"version":"0.0.1",
+	"description":"Inject code to run onload for an url",
+	"content_scripts":[{
+		"css":["css/toastr.css"],
+		"js":["js/jquery-3.5.1.js","js/toastr.min.js","js/wsDB.js","content.js"],
+		"matches":["<all_urls>"],
+		"all_frames":true
+	}],
+	"background":{"scripts":["background.js"]},
+	"permissions":["tabs","storage","<all_urls>"],
+	"browser_action": {
+	   "default_icon":"imgs/app_icon.png",
+	   "default_popup": "./popup.html"
+	  },
+	"icons": {
+    	"16": "imgs/app_icon.png",
+    	"48": "imgs/app_icon.png",
+    	"128": "imgs/app_icon.png"
+  	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://pagecdn.io; object-src 'self'"
+
+}

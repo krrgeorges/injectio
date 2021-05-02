@@ -1,0 +1,30 @@
+body{
+	color: white;
+	width: 700px;;
+	font-family: 'Ubuntu';
+	background-color: #34495E;
+}
+
+.container{
+	max-width: 1000px;
+}
+
+#editor{
+	height: 400px;
+	width: 100%;;
+}
+
+.form-control{
+	margin:10px
+}
+
+.main-btn{
+	margin:10px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.section{
+	margin-top: 10px;
+	margin-bottom: 10px;;
+}

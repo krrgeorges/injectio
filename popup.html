@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>Injectio</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<link rel="stylesheet" type="text/css" href="./css/all.css">
+	<link rel="stylesheet" type="text/css" href="./css/toastr.css">
+	<link rel="stylesheet" type="text/css" href="./css/popup.css">
+	<script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/toastr.min.js"></script>
+	<script src="https://pagecdn.io/lib/ace/1.4.12/ace.js" crossorigin="anonymous" integrity="sha256-Q9hnBpgBFstzZOr+OKFOWZWfcF5nFXO8Qz48Nmndo6U=" ></script>
+	<script src="./js/wsDB.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./js/popup.js"></script>
+</head>
+<body>
+
+	<div class="container" id="table-view" style="display: none;">
+		<div class="row" style="overflow-x: scroll;">
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th>URL/Regex</th>
+						<th>Code</th>
+						<th>Positional Location</th>
+						<th>Added On</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody id="tr-container">
+
+				</tbody>
+			</table>
+		</div>
+
+		<div class="row" id="second-row" style="display: none;">
+			<div class="col-md-12" style="display:inline-flex;">
+				<div class="col-md-6"><button type="button" class="btn btn-success btn-larger main-btn" id="go-back-btn">Go Back</button></div>
+				<div class="col-md-6"><button type="button" class="btn btn-success btn-larger main-btn" style="float: right;" id="delete-all-btn">Delete All</button></div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="container" id="form-view" style="display: none;">
+
+		<div class="row">
+			<input type="text" class="form form-control" placeholder="URL" id="loc_url"/>
+		</div>
+
+		<div class="row section">
+			<div class="col-md-12" style="display:inline-flex;">
+				<div class="col-md-4">
+					<center>
+						<input class="form-check-input" type="radio" value="0" name="position-href" id="position-href1" checked>
+						<label class="form-check-label">
+							Exact Match
+						</label>
+					</center>
+				</div>
+				<div class="col-md-4">
+					<center>
+						<input class="form-check-input" type="radio" value="1" name="position-href" id="position-href2">
+						<label class="form-check-label">
+							Contains
+						</label>
+					</center>
+				</div>
+				<div class="col-md-4">
+					<center>
+						<input class="form-check-input" type="radio" value="2" name="position-href" id="position-href3">
+						<label class="form-check-label">
+							Regex
+						</label>
+					</center>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="editor">//js code to be injected here</div>
+		</div>
+
+		<div class="row" id="first-row" style="display: none;">
+			<div class="col-md-12" style="display:inline-flex;">
+				<div class="col-md-6"><button type="button" class="btn btn-success btn-larger main-btn" id="inject-btn">Inject</button></div>
+				<div class="col-md-6"><button type="button" class="btn btn-success btn-larger main-btn" style="float: right;" id="view-all-btn">View All</button></div>
+			</div>
+		</div>
+
+		
+
+	</div>
+
+	<div class="container" id="not-view" style="display: none;;">
+		<div class="row section">
+			<div class="col-lg-12"><center>Cannot inject here</center></div>
+		</div>
+	</div>
+
+</body>
+</html>
