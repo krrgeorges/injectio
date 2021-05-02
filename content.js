@@ -15,6 +15,11 @@ db.createTable("references",["url","position_href","code","added_on"]).then(a=>{
 					inject(record[2])
 				}
 			}
+			else if(record[1] == 1){
+				if(window.location.href.indexOf(record[0]) >= 0){
+					inject(record[2])
+				}
+			}
 		}
 	})
 })

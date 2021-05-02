@@ -96,9 +96,6 @@ function showReferences(){
 			else if(records[i][1] == "1" || records[i][1] == 1){
 				phref = "Contains"
 			}
-			else if(records[i][1] == "2" || records[i][1] == 2){
-				phref = "Regex"
-			}
 			trs += "<tr><td>"+records[i][0]+"</td><td><input type='text' disabled value='"+records[i][2]+"'/></td><td>"+phref+"</td><td>"+records[i][3]+"</td><td><button type='button' class='btn btn-danger del-ref' data-url='"+records[i][3]+"'>Delete</button></td></tr>"
 		}
 		$("#tr-container").html(trs)
